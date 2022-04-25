@@ -20,6 +20,8 @@
         }
 
         [HttpPost("ismatch")]
+        [ProducesResponseType(typeof(bool), 200)]
+        [ProducesResponseType(typeof(ErrorDTO), 400)]
         public IActionResult IsMatch([FromBody] RegexInputsDTO inputs)
         {
             if (!inputs.TryValidate(out var errors))
@@ -40,6 +42,8 @@
         }
 
         [HttpPost("match")]
+        [ProducesResponseType(typeof(IEnumerable<MatchResultDTO>), 200)]
+        [ProducesResponseType(typeof(ErrorDTO), 400)]
         public IActionResult GetMatchedExpressions([FromBody] RegexInputsDTO inputs)
         {
             if (!inputs.TryValidate(out var errors))
@@ -60,6 +64,8 @@
         }
 
         [HttpPost("replace")]
+        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(typeof(ErrorDTO), 400)]
         public IActionResult Replace([FromBody] ReplaceInputsDTO inputs)
         {
             if (!inputs.TryValidate(out var errors))
