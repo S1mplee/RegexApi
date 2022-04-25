@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexApi", "ApiTest\RegexApi.csproj", "{D1CDD50E-3F35-44F7-890A-AB445EE75221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexApi", "RegexApi\RegexApi.csproj", "{D1CDD50E-3F35-44F7-890A-AB445EE75221}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexApi.Core", "ApiTest.Core\RegexApi.Core.csproj", "{ADB71C8C-A2A2-4CE5-B30C-84F3EB508F36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexApi.Core", "RegexApi.Core\RegexApi.Core.csproj", "{ADB71C8C-A2A2-4CE5-B30C-84F3EB508F36}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexApi.Contracts", "RegexApi.Contracts\RegexApi.Contracts.csproj", "{288C5F4B-EB0C-44A5-80EB-20CCE1605CC9}"
 EndProject

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApiTest.Core\RegexApi.Core.csproj" />
+    <ProjectReference Include="..\RegexApi.Core\RegexApi.Core.csproj" />
   </ItemGroup>
 
 
