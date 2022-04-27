@@ -1,12 +1,12 @@
 ﻿namespace RegexApi.Contracts.DTO
 {
     using System.Collections.Generic;
-    public class MatchResultDTO
+    public class MatchResult
     {
         public string FullMatch { get; }
         public int Position { get; }
         public IEnumerable<Group> Groups { get; set; }
-        public MatchResultDTO(string value, int position , IEnumerable<Group> groups)
+        public MatchResult(string value, int position , IEnumerable<Group> groups)
         {
             FullMatch = value;
             Position = position;

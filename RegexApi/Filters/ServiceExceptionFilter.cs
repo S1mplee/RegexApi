@@ -8,7 +8,7 @@
     {
         public void OnException(ExceptionContext context)
         {
-            var error = new ErrorDTO(
+            var error = new Error(
                 Contracts.Enum.FailureReasonCode.None, 
                 new string[] { "Something went wrong! Internal Server Error." });
 

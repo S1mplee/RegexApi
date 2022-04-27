@@ -9,7 +9,7 @@
 
     public class RegexService : IRegexService
     {
-        public IEnumerable<MatchResultDTO> GetMatchedExpressions(string text, string pattern, short[] regexFlags = null)
+        public IEnumerable<MatchResult> GetMatchedExpressions(string text, string pattern, short[] regexFlags = null)
         {
             try
             {

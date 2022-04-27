@@ -6,7 +6,7 @@
     public interface IRegexService
     {
         bool IsExpressionMatches(string text, string pattern, short[] regexFlags = null);
-        IEnumerable<MatchResultDTO> GetMatchedExpressions(string text, string pattern, short[] regexFlags = null);
+        IEnumerable<MatchResult> GetMatchedExpressions(string text, string pattern, short[] regexFlags = null);
         string Replace(string text, string pattern, string replacement, short[] regexFlags = null);
     }
 }

@@ -1,9 +1,9 @@
 ﻿namespace RegexApi.Contracts.DTO
 {
     using RegexApi.Contracts.Enum;
-    public class ErrorDTO
+    public class Error
     {
-        public ErrorDTO(FailureReasonCode failureReasonCode,string[] errors)
+        public Error(FailureReasonCode failureReasonCode,string[] errors)
         {
             FailureReasonCode = failureReasonCode;
             Errors = errors;

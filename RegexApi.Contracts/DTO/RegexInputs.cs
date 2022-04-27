@@ -3,7 +3,7 @@
     using RegexApi.Contracts.Interfaces;
     using System.Text;
 
-    public class RegexInputsDTO : IValidator
+    public class RegexInputs : IValidator
     {
         public string Text { get; set; }
         public string RegularExpression { get; set; }

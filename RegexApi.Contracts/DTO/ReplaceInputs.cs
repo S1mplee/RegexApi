@@ -1,7 +1,7 @@
 ﻿namespace RegexApi.Contracts.DTO
 {
     using System.Text;
-    public class ReplaceInputsDTO : RegexInputsDTO
+    public class ReplaceInputs : RegexInputs
     {
         public string Replacement { get; set; }
 

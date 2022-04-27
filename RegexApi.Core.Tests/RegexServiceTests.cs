@@ -15,7 +15,7 @@ namespace RegexApi.Core.Tests
         }
 
         [Fact]
-        public void Can_Return_True_If_Text_Matches_Expression()
+        public void Should_Return_True_When_Text_Matches_Expression()
         {
             var text = "we are here here";
             var pattern = "\\b(?<word>\\w+)\\s+(\\k<word>)\\b";
@@ -24,7 +24,7 @@ namespace RegexApi.Core.Tests
         }
 
         [Fact]
-        public void Can_Return_True_If_Text_Matches_Expression_With_IgnoreCaseFlag()
+        public void Should_Return_True_When_Text_Matches_Expression_With_IgnoreCaseFlag()
         {
             var text = "we are here Here";
             var pattern = "\\b(?<word>\\w+)\\s+(\\k<word>)\\b";
@@ -33,7 +33,7 @@ namespace RegexApi.Core.Tests
         }
 
         [Fact]
-        public void Can_Return_False_If_Text_Does_Not_Matches_Expression()
+        public void Should_Return_False_When_Text_Does_Not_Matches_Expression()
         {
             var text = "we are here";
             var pattern = "\\b(?<word>\\w+)\\s+(\\k<word>)\\b";
@@ -42,7 +42,7 @@ namespace RegexApi.Core.Tests
         }
 
         [Fact]
-        public void Can_Replace_Matched_Expressions()
+        public void Should_Replace_Matched_Expressions()
         {
             var text = "we are here here";
             var pattern = "\\b(?<word>\\w+)\\s+(\\k<word>)\\b";
@@ -52,12 +52,12 @@ namespace RegexApi.Core.Tests
         }
 
         [Fact]
-        public void Can_Return_Matched_Expressions()
+        public void Should_Return_Matched_Expressions()
         {
             var text = "we are here here";
             var pattern = "\\b(?<word>\\w+)\\s+(\\k<word>)\\b";
 
-            var matchedResultExpected = new MatchResultDTO("here here", 7, new List<MatchResultDTO.Group> { new MatchResultDTO.Group("here here", 7), new MatchResultDTO.Group("here", 7), new MatchResultDTO.Group("here", 12) });
+            var matchedResultExpected = new MatchResult("here here", 7, new List<MatchResult.Group> { new MatchResult.Group("here here", 7), new MatchResult.Group("here", 7), new MatchResult.Group("here", 12) });
 
             var matchedResult = regexService.GetMatchedExpressions(text, pattern);
 
@@ -67,7 +67,7 @@ namespace RegexApi.Core.Tests
         }
 
         [Fact]
-        public void Cannot_Return_Result_If_Invalid_Inputs()
+        public void Should_Not_Return_Result_If_Invalid_Inputs()
         {
             Assert.Throws<RegexException>(() => regexService.IsExpressionMatches(null, null));
             Assert.Throws<RegexException>(() => regexService.IsExpressionMatches(null, "\\b(?<word>\\w+)\\s+(\\k<word>)\\b"));
