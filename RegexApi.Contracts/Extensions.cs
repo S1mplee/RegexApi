@@ -1,8 +1,7 @@
-﻿using RegexApi.Contracts.DTO;
-using System.Collections.Generic;
-
-namespace RegexApi.Contracts
+﻿namespace RegexApi.Contracts
 {
+    using System.Collections.Generic;
+
     public static class Extensions
     {
         public static bool IsValidRegexFlags(this short[] flags)
